@@ -5991,7 +5991,7 @@ local nigga = (function() -- src/Lua/loader.lua
                             end
                             
                             -- auto buy
-                            if game.PlaceId ~= 14277620939 then
+                            if game.PlaceId ~= 9825515356 then
                                 do
                                     local auto_buy = {
                                         enabled = false,
@@ -6302,7 +6302,7 @@ local nigga = (function() -- src/Lua/loader.lua
                                 local other = miscTab:Section("other", "right")
                                 
                                 -- disable seats
-                                if game.PlaceId ~= 14277620939 then
+                                if game.PlaceId ~= 9825515356 then
                                     do
                                         local Ignored = workspace:WaitForChild("Ignored")
                                         local MAP = workspace:WaitForChild("MAP")
