@@ -4707,7 +4707,7 @@ local nigga = (function() -- src/Lua/loader.lua
                                     end
                                 end)
                             end
-                            
+                          
                             local function aim()
                                 if not silentaim.position then
                                     return end
@@ -5991,7 +5991,172 @@ local nigga = (function() -- src/Lua/loader.lua
                             end
                             
                             -- auto buy
-                            if game.PlaceId ~= 9825515356 then
+                            if game.PlaceId ~= 14277620939 then
+                                do
+                                    local auto_buy = {
+                                        enabled = false,
+                                        objects = {
+                                            guns = {},
+                                            equipment = {},
+                                            food = {}
+                                        },
+                                        state = false
+                                    }
+                                
+                                    local shops = workspace:WaitForChild("Ignored"):FindFirstChild("Shop")
+                                
+                                    function auto_buy:purchase(arguments)
+                                        local click_detector = arguments.ClickDetector
+                                        local head = arguments.Head
+                                
+                                        local Distance = (LocalPlayer.Character.HumanoidRootPart.Position - head.Position).Magnitude
+                                        if Distance < 9 then
+                                            fireclickdetector(click_detector)
+                                        end
+                                    end
+                                
+                                    function auto_buy:gun(child, string_name, dropdown_value)
+                                        if not table.find(auto_buy.objects.guns, dropdown_value) then return end
+                                        if not child.Name:find(string_name) then return end
+                                        pcall(function ()
+                                            self:purchase({ ClickDetector = child.ClickDetector, Head = child.Head })
+                                        end)
+                                    end
+                                
+                                    function auto_buy:equipment(child, string_name, dropdown_value)
+                                        if not table.find(auto_buy.objects.equipment, dropdown_value) then return end
+                                        if not child.Name:find(string_name) then return end
+                                        pcall(function ()
+                                            self:purchase({ ClickDetector = child.ClickDetector, Head = child.Head })
+                                        end)
+                                    end
+                                
+                                    function auto_buy:food(child, string_name, dropdown_value)
+                                        if not table.find(auto_buy.objects.food, dropdown_value) then return end
+                                        if not child.Name:find(string_name) then return end
+                                        pcall(function ()
+                                            self:purchase({ ClickDetector = child.ClickDetector, Head = child.Head })
+                                        end)
+                                    end
+                                
+                                    function auto_buy:has_armor()
+                                        return LocalPlayer.Character.BodyEffects.Armor.Value > 0 and true or false
+                                    end
+                                
+                                    local shop_objs = shops:GetChildren()
+                                
+                                    function auto_buy:start()
+                                        if not da_hood.functions:is_localplayer_alive() then return end
+                                        if not auto_buy.enabled then return end
+                                
+                                        if not auto_buy.state then
+                                            auto_buy.state = true
+                                
+                                            for _, v in ipairs(shop_objs) do
+                                                if v:FindFirstChild("Head") then
+                                                    do -- guns
+                                                        auto_buy:gun(v, "Double", "[Double-Barrel SG]")
+                                                        auto_buy:gun(v, "Revolver", "[Revolver]")
+                                                        auto_buy:gun(v, "Rifle", "[Rifle]")
+                                                        auto_buy:gun(v, "[Shotgun]", "[Shotgun]")
+                                                        auto_buy:gun(v, "TacticalShotgun", "[TacticalShotgun]")
+                                                        auto_buy:gun(v, "[Silencer]", "[Silencer]")
+                                                        auto_buy:gun(v, "SilencerAR", "[SilencerAR]")
+                                                        auto_buy:gun(v, "LMG", "[LMG]")
+                                                        auto_buy:gun(v, "Glock", "[Glock]")
+                                                        auto_buy:gun(v, "SMG", "[SMG]")
+                                                        auto_buy:gun(v, "AK47", "[AK47]")
+                                                        auto_buy:gun(v, "AR", "[AR]")
+                                                        auto_buy:gun(v, "AUG", "[AUG]")
+                                                        auto_buy:gun(v, "DrumGun", "[DrumGun]")
+                                                        auto_buy:gun(v, "P90", "[P90]")
+                                                    end
+                                
+                                                    do -- equipment
+                                                        if not auto_buy:has_armor() then
+                                                            auto_buy:equipment(v, "Armor", "[Armor]")
+                                                        end
+                                                    end
+                                
+                                                    do
+                                                        auto_buy:food(v, "Chicken", "[Chicken]")
+                                                        auto_buy:food(v, "Pizza", "[Pizza]")
+                                                        auto_buy:food(v, "Cranberry", "[Cranberry]")
+                                                    end
+                                                end
+                                            end
+                                
+                                            auto_buy.state = false
+                                        end
+                                    end
+                                
+                                    local run_auto_buy = false
+                                
+                                    local auto_buy_func = function()
+                                        while run_auto_buy do
+                                            task.wait(0.1)
+                                
+                                            auto_buy:start()
+                                        end
+                                    end
+                                
+                                    local gun_list = { "[Double-Barrel SG]", "[Revolver]", "[Rifle]", "[TacticalShotgun]", "[Shotgun]",
+                                        "[Silencer]", "[SilencerAR]", "[LMG]", "[Glock]", "[SMG]", "[AK47]", "[AR]", "[AUG]", "[DrumGun]", "[P90]" }
+                                
+                                    local equipment_list = { "[Armor]" }
+                                
+                                    local food_list = { "[Chicken]", "[Pizza]", "[Cranberry]" }
+                                
+                                    local buy_bot = miscTab:Section("buybot", "left")
+                                
+                                    buy_bot:Toggle({
+                                        title = "enabled",
+                                        default = false,
+                                        callback = function(bool)
+                                            auto_buy.enabled = bool
+                                
+                                            if bool then
+                                                run_auto_buy = true
+                                                coroutine.wrap(auto_buy_func)()
+                                            else
+                                                run_auto_buy = false
+                                            end
+                                        end
+                                    })
+                                
+                                    buy_bot:Dropdown({
+                                        title = "guns",
+                                        values = gun_list,
+                                        default = "[Revolver]",
+                                        multi = true,
+                                        callback = function(value)
+                                            auto_buy.objects.guns = value
+                                        end
+                                    })
+                                
+                                    buy_bot:Dropdown({
+                                        title = "equipment",
+                                        values = equipment_list,
+                                        default = "[Armor]",
+                                        multi = true,
+                                        callback = function(value)
+                                            auto_buy.objects.equipment = value
+                                        end
+                                    })
+                                
+                                    buy_bot:Dropdown({
+                                        title = "food",
+                                        values = food_list,
+                                        default = "[Chicken]",
+                                        multi = true,
+                                        callback = function(value)
+                                            auto_buy.objects.food = value
+                                        end
+                                    })
+                                end
+                            end
+                            -- auto buy
+                            if game.PlaceId ~= 14277620939 then
                                 do
                                     local auto_buy = {
                                         enabled = false,
@@ -6302,7 +6467,7 @@ local nigga = (function() -- src/Lua/loader.lua
                                 local other = miscTab:Section("other", "right")
                                 
                                 -- disable seats
-                                if game.PlaceId ~= 9825515356 then
+                                if game.PlaceId ~= 14277620939  then
                                     do
                                         local Ignored = workspace:WaitForChild("Ignored")
                                         local MAP = workspace:WaitForChild("MAP")
@@ -6351,7 +6516,8 @@ local nigga = (function() -- src/Lua/loader.lua
                                     end
                                 end
                                 
-                            
+                               
+                               
                                 -- fake latency
                                 do
                                     local fakelatency = {
