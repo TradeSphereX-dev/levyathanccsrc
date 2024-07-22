@@ -4700,7 +4700,7 @@ local nigga = (function() -- src/Lua/loader.lua
                                     return end
                             
                                 pcall(function ()
-                                    if game.PlaceId == 9825515356 then
+                                    if game.PlaceId == 14277620939 then
                                         silentaim.position = silentaim:get_position() + Vector3.new(25,100,25)
                                     else
                                         silentaim.position = silentaim:get_position()
@@ -5991,7 +5991,7 @@ local nigga = (function() -- src/Lua/loader.lua
                             end
                             
                             -- auto buy
-                            if game.PlaceId ~= 9825515356 then
+                            if game.PlaceId ~= 14277620939 then
                                 do
                                     local auto_buy = {
                                         enabled = false,
@@ -6156,7 +6156,7 @@ local nigga = (function() -- src/Lua/loader.lua
                                 end
                             end
                             -- auto buy
-                            if game.PlaceId ~= 9825515356 then
+                            if game.PlaceId ~= 14277620939 then
                                 do
                                     local auto_buy = {
                                         enabled = false,
@@ -6467,7 +6467,7 @@ local nigga = (function() -- src/Lua/loader.lua
                                 local other = miscTab:Section("other", "right")
                                 
                                 -- disable seats
-                                if game.PlaceId ~= 9825515356  then
+                                if game.PlaceId ~= 14277620939  then
                                     do
                                         local Ignored = workspace:WaitForChild("Ignored")
                                         local MAP = workspace:WaitForChild("MAP")
