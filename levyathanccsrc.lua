@@ -1,5 +1,6 @@
 
 
+
 local SYC = {
     Modules = {
         UI = {}
@@ -280,10 +281,10 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
     
         UI["2"] = InstanceNew("Frame", UI["1"])
         UI["2"]["BorderSizePixel"] = 0
-        UI["2"]["BackgroundColor3"] = Color3FromRGB(0, 0, 0)
+        UI["2"]["BackgroundColor3"] = Color3FromRGB(24, 24, 24)
         UI["2"]["Size"] = UDim2New(0, 562, 0, 459)
         UI["2"]["Position"] = UDim2New(0, 527, 0, 168)
-        UI["2"]["BorderColor3"] = Color3FromRGB(255, 255, 255)
+        UI["2"]["BorderColor3"] = Color3FromRGB(0, 0, 0)
         UI["2"]["Name"] = [[BackgroundFrame]]
         
         UI["3"] = InstanceNew("UICorner", UI["2"])
@@ -304,7 +305,7 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
         UI["5"]["TextColor3"] = Color3FromRGB(255, 255, 255)
         UI["5"]["BackgroundTransparency"] = 1
         UI["5"]["Size"] = UDim2New(0, 81, 0, 20)
-        UI["5"]["BorderColor3"] = Color3FromRGB(255, 255, 255)
+        UI["5"]["BorderColor3"] = Color3FromRGB(0, 0, 0)
         UI["5"]["Text"] = Configuration.Title
         UI["5"]["Name"] = [[MainTitle]]
         UI["5"]["Position"] = UDim2New(0, 15, 0, 12)
@@ -315,7 +316,7 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
         UI["6"]["BackgroundColor3"] = Color3FromRGB(255, 255, 255)
         UI["6"]["Size"] = UDim2New(0, 1, 0, 16)
         UI["6"]["Position"] = UDim2New(0, 98, 0, 14)
-        UI["6"]["BorderColor3"] = Color3FromRGB(255, 255, 255)
+        UI["6"]["BorderColor3"] = Color3FromRGB(0, 0, 0)
         UI["6"]["Name"] = [[BackgroundAccent]]
     
         UI["7"] = InstanceNew("Frame", UI["2"])
@@ -345,17 +346,17 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
         UI["a"]["TextColor3"] = Color3FromRGB(255, 255, 255)
         UI["a"]["BackgroundTransparency"] = 1
         UI["a"]["Size"] = UDim2New(0, 452, 0, 19)
-        UI["a"]["BorderColor3"] = Color3FromRGB(255, 255, 255)
-        UI["a"]["Text"] = [[ by TradeSphereX]]
+        UI["a"]["BorderColor3"] = Color3FromRGB(0, 0, 0)
+        UI["a"]["Text"] = [[powered by astro.space]]
         UI["a"]["Name"] = [[CreditTitle]]
         UI["a"]["Position"] = UDim2New(0, 96, 0, 428)
     
         UI["b"] = InstanceNew("Frame", UI["2"])
         UI["b"]["BorderSizePixel"] = 0
-        UI["b"]["BackgroundColor3"] = Color3FromRGB(0, 0, 0)
+        UI["b"]["BackgroundColor3"] = Color3FromRGB(17, 17, 17)
         UI["b"]["Size"] = UDim2New(0, 533, 0, 378)
         UI["b"]["Position"] = UDim2New(0.027, 0,0.095, 0)
-        UI["b"]["BorderColor3"] = Color3FromRGB(255, 255, 255)
+        UI["b"]["BorderColor3"] = Color3FromRGB(0, 0, 0)
         UI["b"]["Name"] = [[MainFrame]]
     
         local MainFrameShadow1 = Instance.new("Frame")
@@ -365,10 +366,10 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
         MainFrameShadow1.Parent = UI["b"]
         MainFrameShadow1.ZIndex = 2
         MainFrameShadow1.Size = UDim2.new(1, 0, 0.039682541, 0)
-        MainFrameShadow1.BorderColor3 = Color3.fromRGB(255, 255, 255)
+        MainFrameShadow1.BorderColor3 = Color3.fromRGB(0, 0, 0)
         MainFrameShadow1.Position = UDim2.new(0, 0, 0.960317433, 0)
         MainFrameShadow1.BorderSizePixel = 0
-        MainFrameShadow1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+        MainFrameShadow1.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
         
         MF_SHADOW1.Name = "MF_SHADOW1"
         MF_SHADOW1.Parent = MainFrameShadow1
@@ -382,9 +383,9 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
         MainFrameShadow2.Parent = UI["b"]
         MainFrameShadow2.ZIndex = 2
         MainFrameShadow2.Size = UDim2.new(1, 0, 0.0399999991, 0)
-        MainFrameShadow2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+        MainFrameShadow2.BorderColor3 = Color3.fromRGB(0, 0, 0)
         MainFrameShadow2.BorderSizePixel = 0
-        MainFrameShadow2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+        MainFrameShadow2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
         
         MF_SHADOW2.Name = "MF_SHADOW2"
         MF_SHADOW2.Parent = MainFrameShadow2
@@ -446,7 +447,7 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
             UI["8"]["Size"] = UDim2New(0, X, 1, 0)
             UI["8"]["BackgroundTransparency"] = 1
             UI["8"]["Name"] = [[TabButton]]
-            UI["8"]["BorderColor3"] = Color3FromRGB(255, 255, 255)
+            UI["8"]["BorderColor3"] = Color3FromRGB(0, 0, 0)
             UI["8"]["Text"] = Tab_Name
     
             UI["f"] = InstanceNew("Frame", UI["e"])
@@ -456,7 +457,7 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
             UI["f"]["Name"] = [[MainSectionFrame]]
             UI["f"]["Position"] = UDim2New(0.028, 0,0.142, 0)
             UI["f"]["Size"] = UDim2New(0, 530, 0, 378)
-            UI["f"]["BorderColor3"] = Color3FromRGB(255, 255, 255)
+            UI["f"]["BorderColor3"] = Color3FromRGB(0, 0, 0)
             UI["f"]["BackgroundTransparency"] = 1
             UI["f"]["Position"] = UDim2New(0.027, 0, 0.095, 0)
     
@@ -469,8 +470,8 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
             leftblah["Name"] = [[Left]]
             leftblah["ScrollBarImageTransparency"] = 0
             leftblah["Size"] = UDim2New(0, 265, 1, 0)
-            leftblah["ScrollBarImageColor3"] = Color3FromRGB(255, 255, 255)
-            leftblah["BorderColor3"] = Color3FromRGB(255, 255, 255)
+            leftblah["ScrollBarImageColor3"] = Color3FromRGB(0, 255, 255)
+            leftblah["BorderColor3"] = Color3FromRGB(0, 0, 0)
             leftblah["ScrollBarThickness"] = 3
             leftblah["BackgroundTransparency"] = 1
             leftblah.AutomaticCanvasSize = Enum.AutomaticSize.Y
@@ -494,8 +495,8 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
             rightblahInstance["Name"] = [[Right]]
             rightblahInstance["ScrollBarImageTransparency"] = 0
             rightblahInstance["Size"] = UDim2New(0, 265, 1, 0)
-            rightblahInstance["ScrollBarImageColor3"] = Color3FromRGB(255, 255, 255)
-            rightblahInstance["BorderColor3"] = Color3FromRGB(255, 255, 255)
+            rightblahInstance["ScrollBarImageColor3"] = Color3FromRGB(0, 255, 255)
+            rightblahInstance["BorderColor3"] = Color3FromRGB(0, 0, 0)
             rightblahInstance["ScrollBarThickness"] = 3
             rightblahInstance["BackgroundTransparency"] = 1
             rightblahInstance.AutomaticCanvasSize = Enum.AutomaticSize.Y
@@ -568,16 +569,16 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
     
                 local MainFrameThingy = InstanceNew("Frame", SectionSide)
                 MainFrameThingy["BorderSizePixel"] = 0
-                MainFrameThingy["BackgroundColor3"] = Color3FromRGB(0, 0, 0)
+                MainFrameThingy["BackgroundColor3"] = Color3FromRGB(28, 28, 28)
                 MainFrameThingy["Size"] = UDim2New(0, 247, 0, 20)
                 MainFrameThingy["Position"] = UDim2New(0, 6, 0, 0)
-                MainFrameThingy["BorderColor3"] = Color3FromRGB(255, 255, 255)
+                MainFrameThingy["BorderColor3"] = Color3FromRGB(0, 0, 0)
                 MainFrameThingy["Name"] = [[Column]]
     
                 local MFSTROKE = InstanceNew("UIStroke", MainFrameThingy)
                 MFSTROKE["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
                 MFSTROKE["Name"] = [[ColumnStroke]]
-                MFSTROKE["Color"] = Color3FromRGB(255, 255, 255)
+                MFSTROKE["Color"] = Color3FromRGB(37, 37, 37)
     
                 local uicornerthingyy = InstanceNew("UICorner", MainFrameThingy)
                 uicornerthingyy["Name"] = [[ColumnCorner]]
@@ -592,7 +593,7 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
                 titlethinggyy["TextColor3"] = Color3FromRGB(255, 255, 255)
                 titlethinggyy["BackgroundTransparency"] = 1
                 titlethinggyy["Size"] = UDim2New(0, 229, 0, -4)
-                titlethinggyy["BorderColor3"] = Color3FromRGB(255, 255, 255)
+                titlethinggyy["BorderColor3"] = Color3FromRGB(0, 0, 0)
                 titlethinggyy["Text"] = Section_Name
                 titlethinggyy["Name"] = [[ColumnTitle]]
                 titlethinggyy["Position"] = UDim2New(0, 8, 0, 0)
@@ -611,7 +612,7 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
                 SectionColumnComponents["BackgroundColor3"] = Color3FromRGB(255, 255, 255)
                 SectionColumnComponents["Size"] = UDim2New(0, 229, 0, 0)
                 SectionColumnComponents["Position"] = UDim2New(0, 0, 0, 13)
-                SectionColumnComponents["BorderColor3"] = Color3FromRGB(255, 255, 255)
+                SectionColumnComponents["BorderColor3"] = Color3FromRGB(0, 0, 0)
                 SectionColumnComponents["Name"] = tostring(math.random(10000,16384))
                 SectionColumnComponents["BackgroundTransparency"] = 1
     
@@ -676,7 +677,7 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
                             BoneSelectorHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
                             BoneSelectorHolder.Position = UDim2.new(0, 0, -1.17375305e-06, 0)
                             BoneSelectorHolder.BorderSizePixel = 0
-                            BoneSelectorHolder.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+                            BoneSelectorHolder.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
                             
                             BSHStroke.Name = "BSHStroke"
                             BSHStroke.Parent = BoneSelectorHolder
@@ -3355,10 +3356,10 @@ local nigga = (function() -- src/Lua/loader.lua
         LoaderBackground.Name = "LoaderBackground"
         LoaderBackground.Parent = Loader
         LoaderBackground.Size = UDim2.new(0, 345, 0, 194)
-        LoaderBackground.BorderColor3 = Color3.fromRGB(255, 255, 255)
+        LoaderBackground.BorderColor3 = Color3.fromRGB(0, 0, 0)
         LoaderBackground.Position = UDim2.new(0.393320978, 0, 0.377049178, 0)
         LoaderBackground.BorderSizePixel = 0
-        LoaderBackground.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+        LoaderBackground.BackgroundColor3 = Color3.fromRGB(23, 23, 23)
     
         BackgroundCorner.Name = "BackgroundCorner"
         BackgroundCorner.Parent = LoaderBackground
@@ -3366,17 +3367,17 @@ local nigga = (function() -- src/Lua/loader.lua
         BackgroundStroke.Name = "BackgroundStroke"
         BackgroundStroke.Parent = LoaderBackground
         BackgroundStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-        BackgroundStroke.Color = Color3.fromRGB(1, 1, 1)
+        BackgroundStroke.Color = Color3.fromRGB(30, 32, 30)
         BackgroundStroke.Thickness = 2
     
         MainTitle.Name = "MainTitle"
         MainTitle.Parent = LoaderBackground
         MainTitle.Size = UDim2.new(0, 81, 0, 20)
-        MainTitle.BorderColor3 = Color3.fromRGB(255, 255, 255)
+        MainTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
         MainTitle.BackgroundTransparency = 1
         MainTitle.Position = UDim2.new(0, 6, 0, 6)
         MainTitle.BorderSizePixel = 0
-        MainTitle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+        MainTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         MainTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
         MainTitle.Text = "levyathan.cc"
         MainTitle.TextStrokeTransparency = 0
@@ -3389,12 +3390,12 @@ local nigga = (function() -- src/Lua/loader.lua
         InfoFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
         InfoFrame.Position = UDim2.new(0.0173913036, 0, 0.164948449, 0)
         InfoFrame.BorderSizePixel = 0
-        InfoFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+        InfoFrame.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
     
         InfoFrameStroke.Name = "InfoFrameStroke"
         InfoFrameStroke.Parent = InfoFrame
         InfoFrameStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-        InfoFrameStroke.Color = Color3.fromRGB(255, 255, 255)
+        InfoFrameStroke.Color = Color3.fromRGB(28, 28, 28)
     
         InfoFrameCorner.Name = "InfoFrameCorner"
         InfoFrameCorner.Parent = InfoFrame
@@ -3406,7 +3407,7 @@ local nigga = (function() -- src/Lua/loader.lua
         InfoTitle.BackgroundTransparency = 1
         InfoTitle.Position = UDim2.new(0.0180722885, 0, 0, 0)
         InfoTitle.BorderSizePixel = 0
-        InfoTitle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+        InfoTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         InfoTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
         InfoTitle.Text = "Information"
         InfoTitle.TextXAlignment = Enum.TextXAlignment.Left
@@ -3416,7 +3417,7 @@ local nigga = (function() -- src/Lua/loader.lua
         Information.Name = "Information"
         Information.Parent = InfoFrame
         Information.Size = UDim2.new(0, 233, 0, 87)
-        Information.BorderColor3 = Color3.fromRGB(255, 255, 255)
+        Information.BorderColor3 = Color3.fromRGB(0, 0, 0)
         Information.BackgroundTransparency = 1
         Information.Position = UDim2.new(0.298192769, 0, 0.155339807, 0)
         Information.BorderSizePixel = 0
@@ -3433,21 +3434,21 @@ local nigga = (function() -- src/Lua/loader.lua
         InfoGame.Size = UDim2.new(0, 81, 0, 81)
         InfoGame.BorderColor3 = Color3.fromRGB(25, 25, 25)
         InfoGame.Position = UDim2.new(0.036144577, 0, 0.155339807, 0)
-        InfoGame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-        InfoGame.Image = "rbxassetid://18639758312"
+        InfoGame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        InfoGame.Image = "rbxassetid://18175856299"
     
         OptionsFrame.Name = "OptionsFrame"
         OptionsFrame.Parent = LoaderBackground
         OptionsFrame.Size = UDim2.new(0, 332, 0, 47)
-        OptionsFrame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+        OptionsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
         OptionsFrame.Position = UDim2.new(0.0173913036, 0, 0.726804137, 0)
         OptionsFrame.BorderSizePixel = 0
-        OptionsFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+        OptionsFrame.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
     
         OptionsFrameStroke.Name = "OptionsFrameStroke"
         OptionsFrameStroke.Parent = OptionsFrame
         OptionsFrameStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-        OptionsFrameStroke.Color = Color3.fromRGB(255, 255, 255)
+        OptionsFrameStroke.Color = Color3.fromRGB(28, 28, 28)
     
         OptionsFrameCorner.Name = "OptionsFrameCorner"
         OptionsFrameCorner.Parent = OptionsFrame
@@ -3455,7 +3456,7 @@ local nigga = (function() -- src/Lua/loader.lua
         OptionsTitle.Name = "OptionsTitle"
         OptionsTitle.Parent = OptionsFrame
         OptionsTitle.Size = UDim2.new(0, 326, 0, 16)
-        OptionsTitle.BorderColor3 = Color3.fromRGB(255, 255, 255)
+        OptionsTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
         OptionsTitle.BackgroundTransparency = 1
         OptionsTitle.Position = UDim2.new(0.0180722885, 0, 0, 0)
         OptionsTitle.BorderSizePixel = 0
@@ -3470,10 +3471,10 @@ local nigga = (function() -- src/Lua/loader.lua
         Load_2.Parent = OptionsFrame
         Load_2.ZIndex = 2
         Load_2.Size = UDim2.new(0, 153, 0, 17)
-        Load_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+        Load_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
         Load_2.Position = UDim2.new(0.036144577, 0, 0.46808511, 0)
         Load_2.BorderSizePixel = 0
-        Load_2.BackgroundColor3 = Color3.fromRGB(1, 1, 1)
+        Load_2.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
         Load_2.AutoButtonColor = false
         Load_2.TextColor3 = Color3.fromRGB(255, 255, 255)
         Load_2.Text = "load"
@@ -3488,16 +3489,16 @@ local nigga = (function() -- src/Lua/loader.lua
         LoadBStroke.Name = "LoadBStroke"
         LoadBStroke.Parent = Load_2
         LoadBStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-        LoadBStroke.Color = Color3.fromRGB(255, 255, 255)
+        LoadBStroke.Color = Color3.fromRGB(37, 37, 37)
     
         Exit.Name = "Exit"
         Exit.Parent = OptionsFrame
         Exit.ZIndex = 2
         Exit.Size = UDim2.new(0, 153, 0, 17)
-        Exit.BorderColor3 = Color3.fromRGB(255, 255, 255)
+        Exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
         Exit.Position = UDim2.new(0.515060246, 0, 0.46808511, 0)
         Exit.BorderSizePixel = 0
-        Exit.BackgroundColor3 = Color3.fromRGB(1, 1, 1)
+        Exit.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
         Exit.AutoButtonColor = false
         Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
         Exit.Text = "exit"
@@ -3512,7 +3513,7 @@ local nigga = (function() -- src/Lua/loader.lua
         ExitBStroke.Name = "ExitBStroke"
         ExitBStroke.Parent = Exit
         ExitBStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-        ExitBStroke.Color = Color3.fromRGB(255, 255, 255)
+        ExitBStroke.Color = Color3.fromRGB(37, 37, 37)
     
         Shadow1.Name = "Shadow1"
         Shadow1.Parent = LoaderBackground
@@ -4470,7 +4471,7 @@ local nigga = (function() -- src/Lua/loader.lua
                             gacHandlers.resume = function() run_gac = true coroutine.wrap(g_a_c)() end
                             
                             -- interface
-                            local aim_assist = Interface:Tab( "Aimbot" )
+                            local aim_assist = Interface:Tab( "aim assist" )
                             
                             local main = aim_assist:Section("main", "left")
                             local settings = aim_assist:Section("settings", "left")
@@ -4707,7 +4708,7 @@ local nigga = (function() -- src/Lua/loader.lua
                                     end
                                 end)
                             end
-                          
+                            
                             local function aim()
                                 if not silentaim.position then
                                     return end
@@ -4803,7 +4804,7 @@ local nigga = (function() -- src/Lua/loader.lua
                             gacHandlers.stop = function() run_gac = false end
                             gacHandlers.resume = function() run_gac = true coroutine.wrap(g_a_c)() end
                             
-                            local silent_aim = Interface:Tab( "Silent" )
+                            local silent_aim = Interface:Tab( "silent aim" )
                             
                             local main = silent_aim:Section("main", "left")
                             local settings = silent_aim:Section("settings", "left")
@@ -4959,7 +4960,7 @@ local nigga = (function() -- src/Lua/loader.lua
                                 notification:update()
                             end)
                             
-                            local renderTab = Interface:Tab( "Render" )
+                            local renderTab = Interface:Tab( "render" )
                             
                             local function checkCamView(pos)
                                 return ((pos - camera.CFrame.Position).Unit):Dot(camera.CFrame.LookVector) > 0;
@@ -5959,7 +5960,7 @@ local nigga = (function() -- src/Lua/loader.lua
                             end
                         end
                         do -- src/Lua/Scripts/da_hood/components/d_misc.lua
-                            local miscTab = Interface:Tab( "Misc" )
+                            local miscTab = Interface:Tab( "misc" )
                             
                             -- in-game
                             do
@@ -5991,7 +5992,7 @@ local nigga = (function() -- src/Lua/loader.lua
                             end
                             
                             -- auto buy
-                            if game.PlaceId ~= 9825515356 then
+                            if game.PlaceId ~= 14277620939 then
                                 do
                                     local auto_buy = {
                                         enabled = false,
@@ -6302,7 +6303,7 @@ local nigga = (function() -- src/Lua/loader.lua
                                 local other = miscTab:Section("other", "right")
                                 
                                 -- disable seats
-                                if game.PlaceId ~= 9825515356  then
+                                if game.PlaceId ~= 14277620939 then
                                     do
                                         local Ignored = workspace:WaitForChild("Ignored")
                                         local MAP = workspace:WaitForChild("MAP")
@@ -6351,8 +6352,7 @@ local nigga = (function() -- src/Lua/loader.lua
                                     end
                                 end
                                 
-                               
-                               
+                            
                                 -- fake latency
                                 do
                                     local fakelatency = {
@@ -6491,7 +6491,7 @@ local nigga = (function() -- src/Lua/loader.lua
                             end
                         end
                         do -- src/Lua/Scripts/da_hood/components/e_playerlist.lua
-                            local players_tab = Interface:Tab( "Player" )
+                            local players_tab = Interface:Tab( "player-list" )
                             
                             local players_list = players_tab:Section("main", "left")
                             local advanced = players_tab:Section("advanced", "right")
@@ -6635,8 +6635,11 @@ local nigga = (function() -- src/Lua/loader.lua
                                 return config_list
                             end
                             
-                            local settingsTab = Interface:Tab( "Settings" )
+                            local settingsTab = Interface:Tab( "settings." )
                             
+                            local loading_config = false
+                            local NOTE = settingsTab:Section("TAKE NOTE", "left")
+                            NOTE:Label("THIS SECTION IS STILL IN DEVELOPMENT 🔨")
                             
                             local profiles = settingsTab:Section("configuration", "left")
                             
@@ -7832,7 +7835,7 @@ local nigga = (function() -- src/Lua/loader.lua
                         
                         
                     end
-                    do -- src/Lua/Scripts/universal/components/d_playerlist.lua
+                    do 
                         local players_tab = Interface:Tab( "playerslist" )
                         
                         local players_list = players_tab:Section("main", "left")
@@ -7895,3 +7898,4 @@ local nigga = (function() -- src/Lua/loader.lua
     
     loaderOptions.on_completed(my_script)
 end)()
+
